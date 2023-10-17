@@ -111,6 +111,9 @@ class QuoteMachine extends React.Component {
       text: quote.text,
       author: quote.author
     })
+    this.setState((state) => ({
+      
+    }))
   }
 
   render() {
@@ -124,11 +127,8 @@ class QuoteMachine extends React.Component {
           marginTop: '60px',
           gap: '20px'
         }}>
-          <a id='tweet-quote' href='#'>
+          <a id='tweet-quote' href={`https://twitter.com/intent/tweet?text=${this.state.text}%0a%0a- ${this.state.author}`}>
             <ICON_TWITTER/>
-          </a>
-          <a id='tumblr-quote' href='#'>
-            <ICON_TUMBLR/>
           </a>
         </div>
       </div>
